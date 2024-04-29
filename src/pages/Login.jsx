@@ -1,8 +1,11 @@
+import { Login as LoginPage } from "../Components/index";
 
-function Login() {
-    return (
-        <h3>login</h3>
-    )
-}
+const Login = () => {
+  return (
+    <div className="py-8">
+      <LoginPage />
+    </div>
+  );
+};
 
-export default Login
+export default Login;
