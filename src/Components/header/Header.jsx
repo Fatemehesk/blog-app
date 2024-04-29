@@ -1,5 +1,5 @@
-import Container from "../container/Container";
-import Logo from "../Logo";
+import Container from "../containers/Container";
+import Logo from "../Logos";
 import { Link } from "react-router-dom";
 import LogoutBtn from "./LogoutBtn";
 import { useNavigate } from "react-router-dom";
@@ -38,7 +38,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="py-3 shadow bg-gray-500">
+    <header className="py-3 shadow bg-green-100">
       <Container>
         <nav className="flex">
           <div className="mr-4">

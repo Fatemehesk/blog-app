@@ -1,4 +1,4 @@
-import conf from "../conf/conf.js";
+import conf from "../conf/conf";
 import { Client, Databases, Storage, Query, ID } from "appwrite";
 
 export class Service {
@@ -97,11 +97,12 @@ export class Service {
 
   async uploadFile(file) {
     try {
-      return await this.bucket.createFile(
+      const response = await this.bucket.createFile(
         conf.appwriteBucketId,
         ID.unique(),
         file
-      );
+    );
+    return response;
     } catch (error) {
       console.log("uploadFile() :: ", error);
       return false;
